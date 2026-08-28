@@ -23,7 +23,7 @@ Le projet poursuit une double ambition :
    Architecture propre, Domain‑Driven Design, tests, documentation, CI/CD.
 ---
 
-![Couverture](assets/Couv_86_Dystopie - small.png)
+![Couverture](assets/Couv_86_Dystopie-small.png)
 
 ---
 
