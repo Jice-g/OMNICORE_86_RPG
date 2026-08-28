@@ -60,8 +60,8 @@ namespace Omnicore::Domain
     // 2. DERIVED ATTRIBUTES — Implémentation
     // ============================================================
 
-    DerivedAttributes::DerivedAttributes(int mnv, int dpl, int rfx, int dfp, int sp, int sm) noexcept :
-        m_mnv(mnv), m_dpl(dpl), m_rfx(rfx), m_dfp(dfp), m_sp(sp), m_sm(sm)
+    DerivedAttributes::DerivedAttributes(int mnv, int dpl, int rfx, int dfp, int rp, int rm) noexcept :
+        m_mnv(mnv), m_dpl(dpl), m_rfx(rfx), m_dfp(dfp), m_rp(rp), m_rm(rm)
     {
     }
 

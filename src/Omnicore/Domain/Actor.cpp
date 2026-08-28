@@ -17,17 +17,17 @@ namespace Omnicore::Domain
         m_massModifier(massmod)
     { }
 
-   std::string Morphology::Species()
+	std::string Morphology::Species() const
        {
        return m_species;
        }
 
-   int Morphology::SizeModifier()
+   int Morphology::SizeModifier() const
    {
        return m_sizeModifier;
    }
 
-   int Morphology::MassModifier()
+   int Morphology::MassModifier() const
    {
        return m_massModifier;
    }

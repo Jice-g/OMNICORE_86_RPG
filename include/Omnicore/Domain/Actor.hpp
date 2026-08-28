@@ -61,9 +61,12 @@ namespace Omnicore::Domain
     {
     public:
         Morphology(std::string species, int sizemod = 0, int massmod = 0);
-        std::string Species();
-        int SizeModifier();  
-        int MassModifier();  
+        /// @brief Constructeur par défaut.
+        Morphology() = default;
+
+        std::string Species() const;
+        int SizeModifier() const;  
+        int MassModifier() const;  
 
         void SetSpecies(std::string spe);
         void SetSizeMod(int sizemod);  //< Modificateur de taille [-6..+6] humain :[-1..+1]

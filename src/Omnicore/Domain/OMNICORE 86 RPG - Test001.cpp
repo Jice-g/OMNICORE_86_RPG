@@ -23,19 +23,16 @@ int main()
     std::cout << "=== Test Morphology ===\n\n";
 
     // 1. Création d'une Morphology
-    Morphology morph;
-    morph.species = "Humain";
-    morph.sizeModifier = 0;
-    morph.massModifier = +1;
+    Morphology morph("Humain", 0, 1);
 
     // 2. Affichage
-    std::cout << "Espèce         : " << morph.species << "\n";
-    std::cout << "Mod. Taille    : " << morph.sizeModifier << "\n";
-    std::cout << "Mod. Corpulence: " << morph.massModifier << "\n";
+    std::cout << "Espèce         : " << morph.Species() << "\n";
+    std::cout << "Mod. Taille    : " << morph.SizeModifier() << "\n";
+    std::cout << "Mod. Corpulence: " << morph.MassModifier()<< "\n";
 
     // 3. Vérification simple
-    if (morph.sizeModifier >= -6 && morph.sizeModifier <= 6 &&
-        morph.massModifier >= -6 && morph.massModifier <= 6)
+    if (morph.SizeModifier() >= -6 && morph.SizeModifier() <= 6 &&
+        morph.MassModifier() >= -6 && morph.MassModifier() <= 6)
     {
         std::cout << "\n[OK] Modificateurs dans les bornes [-6..+6]\n";
     }
@@ -51,9 +48,9 @@ int main()
     const Morphology& m2 = perso.GetMorphology();    
 
     std::cout << "\n=== Morphologie de " << perso.Name() << " === \n";
-    std::cout << "Espèce         : " << m2.species << "\n";
-    std::cout << "Mod. Taille    : " << m2.sizeModifier << "\n";
-    std::cout << "Mod. Corpulence: " << m2.massModifier << "\n";
+    std::cout << "Espèce         : " << m2.Species() << "\n";
+    std::cout << "Mod. Taille    : " << m2.SizeModifier() << "\n";
+    std::cout << "Mod. Corpulence: " << m2.MassModifier() << "\n";
 
     return 0;
 }
