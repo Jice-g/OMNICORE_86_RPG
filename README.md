@@ -21,6 +21,9 @@ Le projet poursuit une double ambition :
    Indépendant des univers, des interfaces et du stockage.
 2. **Démonstrateur technique C++ / DevOps**  
    Architecture propre, Domain‑Driven Design, tests, documentation, CI/CD.
+---
+
+![Couverture](assets/Couv_86_Dystopie - small.png)
 
 ---
 
