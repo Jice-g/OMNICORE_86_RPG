@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="OMNICORE_86_RPG.vcxproj" Id="ca81b40d-a18c-440d-bb29-29cba8ac8779" />
+</Solution>

@@ -1,0 +1,45 @@
+﻿#pragma once
+
+#include <vector>
+#include <string>
+#include <span>
+#include <cstdint>
+
+
+#include <iostream>
+
+
+enum class e_AttributePivot : uint8_t
+{
+    PHY, DEX, ESP, PER, SOC, CHA, POU, NEU
+};
+
+struct Specialization
+{
+    std::string name;
+    int bonus = 0; // +1 ou +2
+};
+
+class Skill
+{
+public:
+    Skill() = default;
+
+    Skill(const std::string& name, e_AttributePivot pivot, int level = 0) noexcept;
+
+    const std::string& Name() const noexcept;
+    e_AttributePivot Pivot() const noexcept;
+    int Level() const noexcept;
+
+    bool SetLevel(int newLevel) noexcept;
+
+    std::span<const Specialization> GetSpecializations() const noexcept;
+    bool AddSpecialization(const std::string& name, int bonus) noexcept;
+
+private:
+    std::string m_name;
+    e_AttributePivot m_pivot;
+    int m_level = 0; // 0 à 3
+
+    std::vector<Specialization> m_specs;
+};

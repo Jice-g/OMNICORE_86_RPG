@@ -1,0 +1,2239 @@
+{
+  "catalog": "SkillCatalog",
+  "universe": "Common",
+  "version": 1,
+  "skills": [
+    {
+      "id": "sk_phy-athletism-std",
+      "attribute": "PHY",
+      "name": "Athlétisme",
+      "description": "Capacité à mobiliser le corps dans l'effort physique global : courir, sauter, grimper, nager, porter ou se déplacer dans des conditions difficiles.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_running",
+          "name": "Course",
+          "description": "Sprints, marathons et poursuites.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_climbing",
+          "name": "Escalade",
+          "description": "Parois rocheuses, murs urbains et cordes.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_swimming",
+          "name": "Natation",
+          "description": "Eau libre, plongée et sauvetage aquatique.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_acrobatics",
+          "name": "Acrobatie",
+          "description": "Parkour, voltige et roulades.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_jumping",
+          "name": "Saut",
+          "description": "Longueur, hauteur et franchissement d'obstacles.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_carrying",
+          "name": "Portage",
+          "description": "Charges lourdes et transport prolongé.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_phy-resistance-std",
+      "attribute": "PHY",
+      "name": "Résistance",
+      "description": "Mesure la résistance du corps à la fatigue, à la douleur, aux conditions extrêmes et à l'épuisement prolongé.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_endurance",
+          "name": "Endurance physique",
+          "description": "Efforts prolongés et marches forcées.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_painResistance",
+          "name": "Résistance à la douleur",
+          "description": "Torture et blessures continues.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_poisonResistance",
+          "name": "Résistance aux poisons",
+          "description": "Toxines, venins, drogues et alcool.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_diseaseResistance",
+          "name": "Résistance aux maladies",
+          "description": "Infections et épidémies.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_survival",
+          "name": "Survie",
+          "description": "Résistance au froid, à la chaleur, à la faim, à la soif et au manque de sommeil.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_dex-combat-std",
+      "attribute": "DEX",
+      "name": "Combat",
+      "description": "Maîtrise des affrontements rapprochés à mains nues ou avec armes de mêlée.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_unarmed",
+          "name": "Mains nues",
+          "description": "Boxe, arts martiaux et lutte.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_shortWeapons",
+          "name": "Armes courtes",
+          "description": "Dagues, couteaux, poignards et armes improvisées.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_oneHandedWeapons",
+          "name": "Armes à une main",
+          "description": "Épées, haches et masses.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_twoHandedWeapons",
+          "name": "Armes à deux mains",
+          "description": "Épées longues, haches de bataille et marteaux.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_polearms",
+          "name": "Armes d'hast",
+          "description": "Lances, hallebardes et piques.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_massCombat",
+          "name": "Combat de masse",
+          "description": "Combat en formation et mêlée générale.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_defense",
+          "name": "Défense",
+          "description": "Parades, esquives et blocages.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_dex-shooting-std",
+      "attribute": "DEX",
+      "name": "Tir",
+      "description": "Maîtrise des attaques à distance avec des armes de trait ou à projectile.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_bows",
+          "name": "Arcs",
+          "description": "Arcs courts, longs et composites.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_crossbows",
+          "name": "Arbalètes",
+          "description": "Légères, lourdes et à répétition.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_handguns",
+          "name": "Armes à feu courtes",
+          "description": "Pistolets et revolvers.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_longFirearms",
+          "name": "Armes à feu longues",
+          "description": "Fusils et carabines.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_automaticWeapons",
+          "name": "Armes automatiques et lourdes",
+          "description": "Fusils d'assaut, mitraillettes et armes lourdes.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_precisionFire",
+          "name": "Tir de précision et d'appui",
+          "description": "Sniper, couverture et suppression.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_throwing",
+          "name": "Lancer",
+          "description": "Armes et objets de jet.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_slings",
+          "name": "Frondes",
+          "description": "Frondes à main et de jet.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_dex-stealth-std",
+      "attribute": "DEX",
+      "name": "Discrétion",
+      "description": "Capacité à agir, se déplacer ou se dissimuler sans être repéré.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_silentMovement",
+          "name": "Déplacement silencieux",
+          "description": "Approche furtive.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_camouflage",
+          "name": "Camouflage",
+          "description": "Milieu naturel et urbain.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_socialBlending",
+          "name": "Effacement social",
+          "description": "Se fondre dans la foule.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_shadows",
+          "name": "Ombres et pénombre",
+          "description": "Utilisation de l'obscurité.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_pickpocket",
+          "name": "Pickpocket",
+          "description": "Vol à la tire discret.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_tailing",
+          "name": "Filature",
+          "description": "Suivre une cible sans être détecté.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_ambush",
+          "name": "Embuscade",
+          "description": "Préparation et patience.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_dex-burglary-std",
+      "attribute": "DEX",
+      "name": "Effraction",
+      "description": "Aptitude à contourner ou forcer des systèmes de fermeture et de sécurité.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_lockpicking",
+          "name": "Crochetage",
+          "description": "Serrures mécaniques simples.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_complexLocks",
+          "name": "Serrures complexes",
+          "description": "Serrures de haute sécurité et coffres-forts.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_securitySystems",
+          "name": "Systèmes de sécurité",
+          "description": "Électronique, biométrie, alarmes et pièges.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_forcedEntry",
+          "name": "Effraction destructive",
+          "description": "Ouverture par la force ou démolition.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_dex-piloting-std",
+      "attribute": "DEX",
+      "name": "Pilotage",
+      "description": "Maîtrise des déplacements à l'aide d'un véhicule mécanique.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_lightVehicles",
+          "name": "Véhicules terrestres légers",
+          "description": "Voitures et motos.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_heavyVehicles",
+          "name": "Véhicules lourds",
+          "description": "Camions et chars.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_racing",
+          "name": "Véhicules de course",
+          "description": "Conduite sportive.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_watercraft",
+          "name": "Véhicules aquatiques",
+          "description": "Bateaux et jet-skis.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_aircraft",
+          "name": "Véhicules aériens",
+          "description": "Avions et hélicoptères.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_spacecraft",
+          "name": "Véhicules spatiaux",
+          "description": "Navettes et vaisseaux.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_mechas",
+          "name": "Méchas et robots",
+          "description": "Pilotage de plateformes mécanisées.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_chase",
+          "name": "Poursuites",
+          "description": "Évasion et interception.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_offroad",
+          "name": "Conduite tout-terrain",
+          "description": "Terrains difficiles.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_dex-riding-std",
+      "attribute": "DEX",
+      "name": "Équitation",
+      "description": "Maîtrise des déplacements à l'aide d'une monture animale.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_horses",
+          "name": "Chevaux",
+          "description": "Monte classique et course.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_exoticMounts",
+          "name": "Montures exotiques",
+          "description": "Montures inhabituelles ou fantastiques.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_mountedAcrobatics",
+          "name": "Acrobaties montées",
+          "description": "Voltige et tir monté.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_drivingTeam",
+          "name": "Attelage",
+          "description": "Chariots et carrosses.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_roughTerrain",
+          "name": "Terrain difficile",
+          "description": "Montagne, forêt et terrains accidentés.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_dex-medical-std",
+      "attribute": "DEX",
+      "name": "Soins",
+      "description": "Capacité à réaliser des gestes médicaux ou paramédicaux pratiques.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_firstAid",
+          "name": "Premiers secours",
+          "description": "Urgences et stabilisation.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_fieldSurgery",
+          "name": "Chirurgie de campagne",
+          "description": "Interventions d'urgence.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_advancedSurgery",
+          "name": "Chirurgie avancée",
+          "description": "Opérations complexes.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_herbalism",
+          "name": "Herboristerie",
+          "description": "Plantes médicinales et remèdes naturels.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_pharmacology",
+          "name": "Pharmacologie",
+          "description": "Préparation et dosage des médicaments.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_veterinary",
+          "name": "Médecine vétérinaire",
+          "description": "Soins aux animaux.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_diagnosis",
+          "name": "Diagnostic",
+          "description": "Identification des maladies et blessures.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_antidotes",
+          "name": "Antidotes",
+          "description": "Neutralisation des poisons et toxines.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_dex-plasticarts-std",
+      "attribute": "DEX",
+      "name": "Arts plastiques",
+      "description": "Capacité à réaliser des œuvres artistiques matérielles ou numériques.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_drawing",
+          "name": "Dessin",
+          "description": "Croquis, illustration et plans.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_painting",
+          "name": "Peinture",
+          "description": "Huile, acrylique et aquarelle.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_sculpture",
+          "name": "Sculpture",
+          "description": "Pierre, bois, métal et argile.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_graphicDesign",
+          "name": "Graphisme",
+          "description": "Design et mise en page.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_calligraphy",
+          "name": "Calligraphie",
+          "description": "Écriture artistique.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_photography",
+          "name": "Photographie",
+          "description": "Composition et retouche.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_tattoo",
+          "name": "Tatouage",
+          "description": "Art corporel permanent.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_graffiti",
+          "name": "Graffiti",
+          "description": "Art urbain.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_digitalArt",
+          "name": "Art numérique",
+          "description": "Illustration et modélisation numériques.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_dex-technics-electricity",
+      "attribute": "DEX",
+      "name": "Technique : Électricité",
+      "description": "Compétence pratique dans le domaine de l'électricité.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_domestic",
+          "name": "Domestique",
+          "description": "Installations résidentielles.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_industrial",
+          "name": "Industrielle",
+          "description": "Installations industrielles.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_automation",
+          "name": "Automatismes",
+          "description": "Automates et systèmes automatisés.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_homeAutomation",
+          "name": "Domotique",
+          "description": "Habitats intelligents.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_diagnostic",
+          "name": "Diagnostic",
+          "description": "Recherche de pannes.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_maintenance",
+          "name": "Maintenance",
+          "description": "Entretien et réparation.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_dex-technics-electronics",
+      "attribute": "DEX",
+      "name": "Technique : Électronique",
+      "description": "Compétence pratique dans le domaine de l'électronique.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_analog",
+          "name": "Analogique",
+          "description": "Circuits analogiques.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_digital",
+          "name": "Numérique",
+          "description": "Circuits numériques.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_embedded",
+          "name": "Embarqué",
+          "description": "Systèmes embarqués.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_components",
+          "name": "Composants",
+          "description": "Choix et remplacement des composants.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_diagnostic",
+          "name": "Diagnostic",
+          "description": "Recherche de pannes électroniques.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_repair",
+          "name": "Réparation",
+          "description": "Remise en état des équipements.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_dex-technics-computing",
+      "attribute": "DEX",
+      "name": "Technique : Informatique",
+      "description": "Compétence pratique dans le domaine informatique.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_programming",
+          "name": "Programmation",
+          "description": "Développement logiciel.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_systems",
+          "name": "Systèmes",
+          "description": "Administration système.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_networks",
+          "name": "Réseaux",
+          "description": "Infrastructure réseau.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_databases",
+          "name": "Bases de données",
+          "description": "Gestion et exploitation des données.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_cybersecurity",
+          "name": "Cybersécurité",
+          "description": "Protection des systèmes.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_hacking",
+          "name": "Hacking",
+          "description": "Intrusion et exploitation.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_dex-technics-mechanics",
+      "attribute": "DEX",
+      "name": "Technique : Mécanique",
+      "description": "Compétence pratique dans le domaine de la mécanique.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_vehicles",
+          "name": "Véhicules",
+          "description": "Automobiles et motos.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_industrial",
+          "name": "Machines industrielles",
+          "description": "Machines de production.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_hydraulics",
+          "name": "Hydraulique",
+          "description": "Circuits hydrauliques.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_pneumatics",
+          "name": "Pneumatique",
+          "description": "Circuits pneumatiques.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_diagnostic",
+          "name": "Diagnostic",
+          "description": "Recherche de pannes mécaniques.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_maintenance",
+          "name": "Maintenance",
+          "description": "Entretien et réparation.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_dex-technics-carpentry",
+      "attribute": "DEX",
+      "name": "Technique : Menuiserie",
+      "description": "Compétence pratique dans le travail du bois.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_furniture",
+          "name": "Mobilier",
+          "description": "Fabrication de meubles.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_framing",
+          "name": "Charpente",
+          "description": "Structures porteuses.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_joinery",
+          "name": "Assemblage",
+          "description": "Techniques d'assemblage.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_restoration",
+          "name": "Restauration",
+          "description": "Réparation d'ouvrages.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_dex-technics-smithing",
+      "attribute": "DEX",
+      "name": "Technique : Forge",
+      "description": "Compétence pratique dans le travail des métaux.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_blacksmithing",
+          "name": "Forge générale",
+          "description": "Travail courant des métaux.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_weaponsmith",
+          "name": "Armurerie",
+          "description": "Fabrication d'armes.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_armorsmith",
+          "name": "Armures",
+          "description": "Fabrication d'armures.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_toolmaking",
+          "name": "Outillage",
+          "description": "Fabrication d'outils.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_dex-technics-alchemy",
+      "attribute": "DEX",
+      "name": "Technique : Alchimie",
+      "description": "Compétence pratique dans les procédés alchimiques.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_distillation",
+          "name": "Distillation",
+          "description": "Extraction et purification.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_elixirs",
+          "name": "Élixirs",
+          "description": "Préparation d'élixirs.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_transmutation",
+          "name": "Transmutation",
+          "description": "Transformation de matières.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_reagents",
+          "name": "Réactifs",
+          "description": "Préparation de composés.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_dex-technics-explosives",
+      "attribute": "DEX",
+      "name": "Technique : Explosifs",
+      "description": "Compétence pratique liée aux explosifs et à la pyrotechnie.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_manufacturing",
+          "name": "Fabrication",
+          "description": "Préparation des charges.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_demolition",
+          "name": "Démolition",
+          "description": "Mise en œuvre contrôlée.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_disarming",
+          "name": "Désamorçage",
+          "description": "Neutralisation des explosifs.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_pyrotechnics",
+          "name": "Pyrotechnie",
+          "description": "Effets pyrotechniques.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_dex-technics-engineering",
+      "attribute": "DEX",
+      "name": "Technique : Ingénierie",
+      "description": "Compétence pratique en conception et réalisation technique.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_design",
+          "name": "Conception",
+          "description": "Conception technique.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_calculation",
+          "name": "Calculs",
+          "description": "Dimensionnement.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_project",
+          "name": "Gestion de projet",
+          "description": "Organisation des réalisations.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_prototyping",
+          "name": "Prototypage",
+          "description": "Réalisation de prototypes.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_dex-technics-agriculture",
+      "attribute": "DEX",
+      "name": "Technique : Agriculture",
+      "description": "Compétence pratique dans les activités agricoles.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_crops",
+          "name": "Cultures",
+          "description": "Production végétale.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_livestock",
+          "name": "Élevage",
+          "description": "Production animale.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_irrigation",
+          "name": "Irrigation",
+          "description": "Gestion de l'eau.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_agriculturalTools",
+          "name": "Matériel agricole",
+          "description": "Utilisation et entretien.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_dex-technics-navigation",
+      "attribute": "DEX",
+      "name": "Technique : Navigation maritime",
+      "description": "Compétence pratique dans la conduite d'un navire.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_sailing",
+          "name": "Voile",
+          "description": "Navigation à voile.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_steam",
+          "name": "Vapeur",
+          "description": "Propulsion à vapeur.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_navigation",
+          "name": "Navigation",
+          "description": "Routes et cartes marines.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_seamanship",
+          "name": "Manœuvres",
+          "description": "Manœuvres portuaires et en mer.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_esp-insight-std",
+      "attribute": "ESP",
+      "name": "Perspicacité",
+      "description": "Capacité à analyser rapidement une situation complexe et à en comprendre les implications.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_tacticalAnalysis",
+          "name": "Analyse tactique",
+          "description": "Combat, terrain et positionnement.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_strategicAnalysis",
+          "name": "Analyse stratégique",
+          "description": "Plans à long terme et anticipation.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_deduction",
+          "name": "Déduction",
+          "description": "Raisonnement logique et formulation d'hypothèses.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_socialAnalysis",
+          "name": "Lecture sociale",
+          "description": "Compréhension des dynamiques de groupe.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_threatAssessment",
+          "name": "Évaluation des menaces",
+          "description": "Identification et hiérarchisation des dangers.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_motivationAnalysis",
+          "name": "Compréhension des motivations",
+          "description": "Identifier les intentions cachées.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_patternRecognition",
+          "name": "Reconnaissance de schémas",
+          "description": "Détection de régularités et tendances.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_investigation",
+          "name": "Investigation",
+          "description": "Analyse documentaire, recherche et reconstitution.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_esp-mentalResilience-std",
+      "attribute": "ESP",
+      "name": "Résistance mentale",
+      "description": "Capacité à résister au stress, à la peur, aux manipulations et aux traumatismes psychologiques.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_fear",
+          "name": "Résistance à la peur",
+          "description": "Horreur, terreur et effroi.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_manipulation",
+          "name": "Résistance à la manipulation",
+          "description": "Influence et contrôle mental.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_torture",
+          "name": "Résistance à la torture",
+          "description": "Pressions psychologiques et physiques.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_illusions",
+          "name": "Résistance aux illusions",
+          "description": "Mirages et tromperies mentales.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_composure",
+          "name": "Sang-froid",
+          "description": "Garder son calme sous pression.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_trauma",
+          "name": "Résistance aux traumatismes",
+          "description": "Surmonter les chocs psychologiques.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_meditation",
+          "name": "Méditation",
+          "description": "Concentration et maîtrise de soi.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_esp-memory-std",
+      "attribute": "ESP",
+      "name": "Mémorisation",
+      "description": "Capacité à retenir, retrouver et exploiter des informations.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_visual",
+          "name": "Mémoire visuelle",
+          "description": "Visages, lieux et détails.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_auditory",
+          "name": "Mémoire auditive",
+          "description": "Voix, sons et conversations.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_factual",
+          "name": "Mémoire des faits",
+          "description": "Dates, événements et connaissances.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_procedural",
+          "name": "Mémoire procédurale",
+          "description": "Gestes, routines et techniques.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_underStress",
+          "name": "Rappel sous stress",
+          "description": "Retrouver une information en situation critique.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_longTerm",
+          "name": "Mémoire à long terme",
+          "description": "Souvenirs anciens et connaissances durables.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_fastLearning",
+          "name": "Mémorisation rapide",
+          "description": "Assimilation accélérée.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_esp-intuition-std",
+      "attribute": "ESP",
+      "name": "Intuition",
+      "description": "Capacité à prendre rapidement une bonne décision à partir d'impressions ou d'indices subtils.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_danger",
+          "name": "Pressentiment de danger",
+          "description": "Percevoir un danger imminent.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_social",
+          "name": "Intuition sociale",
+          "description": "Ressentir les tensions et ambiances.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_instinct",
+          "name": "Choix instinctif",
+          "description": "Décisions rapides sans analyse.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_environment",
+          "name": "Lecture d'environnement",
+          "description": "Atmosphères et lieux inhabituels.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_subtle",
+          "name": "Perception subtile",
+          "description": "Indices faibles et sensations difficiles à expliquer.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_timing",
+          "name": "Timing",
+          "description": "Choisir le moment opportun.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_direction",
+          "name": "Direction instinctive",
+          "description": "Choisir spontanément la bonne direction.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_esp-knowledge-history",
+      "attribute": "ESP",
+      "name": "Connaissance : Histoire",
+      "description": "Connaissance des civilisations, périodes et événements historiques.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_ancient",
+          "name": "Antiquité",
+          "description": "Civilisations antiques.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_medieval",
+          "name": "Moyen Âge",
+          "description": "Histoire médiévale.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_modern",
+          "name": "Époque moderne",
+          "description": "Du XVe au XVIIIe siècle.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_contemporary",
+          "name": "Époque contemporaine",
+          "description": "Du XIXe siècle à nos jours.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_military",
+          "name": "Histoire militaire",
+          "description": "Conflits, armées et stratégies.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_religions",
+          "name": "Religions",
+          "description": "Histoire religieuse et cultes.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_politics",
+          "name": "Courants politiques",
+          "description": "Histoire des grands courants politiques.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_discoveries",
+          "name": "Histoire des découvertes",
+          "description": "Histoire des grandes découvertes techniques et scientifiques.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_esp-knowledge-geography",
+      "attribute": "ESP",
+      "name": "Connaissance : Géographie",
+      "description": "Connaissance des territoires et de leur organisation.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_physical",
+          "name": "Géographie physique",
+          "description": "Reliefs, fleuves et océans.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_human",
+          "name": "Géographie humaine",
+          "description": "Population et urbanisation.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_climatology",
+          "name": "Climatologie",
+          "description": "Climats et météorologie.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_geopolitics",
+          "name": "Géopolitique",
+          "description": "Territoires et frontières.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_cartography",
+          "name": "Cartographie",
+          "description": "Lecture et réalisation de cartes.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_landsAndContinents",
+          "name": "Pays & continents",
+          "description": "Evolution des terres et territoires.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_oceans",
+          "name": "Océanographie",
+          "description": "LConnaissance des mers et des océans.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_esp-knowledge-politics",
+      "attribute": "ESP",
+      "name": "Connaissance : Politique",
+      "description": "Connaissance des systèmes politiques et des institutions.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_institutions",
+          "name": "Institutions",
+          "description": "Organisation des États.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_ideologies",
+          "name": "Idéologies",
+          "description": "Courants politiques.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_strategy",
+          "name": "Stratégie",
+          "description": "Stratégies politiques.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_diplomacy",
+          "name": "Diplomatie",
+          "description": "Relations internationales.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_esp-knowledge-economics",
+      "attribute": "ESP",
+      "name": "Connaissance : Économie",
+      "description": "Connaissance des échanges et des systèmes économiques.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_markets",
+          "name": "Marchés",
+          "description": "Fonctionnement des marchés.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_trade",
+          "name": "Commerce",
+          "description": "Échanges commerciaux.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_finance",
+          "name": "Finance",
+          "description": "Banques et capitaux.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_accounting",
+          "name": "Comptabilité",
+          "description": "Gestion comptable.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_esp-knowledge-philosophy",
+      "attribute": "ESP",
+      "name": "Connaissance : Philosophie",
+      "description": "Connaissance des courants philosophiques.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_ethics",
+          "name": "Éthique",
+          "description": "Morale et valeurs.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_metaphysics",
+          "name": "Métaphysique",
+          "description": "Nature de la réalité.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_logic",
+          "name": "Logique",
+          "description": "Raisonnement formel.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_history",
+          "name": "Histoire de la philosophie",
+          "description": "Courants et penseurs.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_theology",
+          "name": "Théologie",
+          "description": "Connaissance des théologies",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_esp-knowledge-literature",
+      "attribute": "ESP",
+      "name": "Connaissance : Littérature",
+      "description": "Connaissance des œuvres et mouvements littéraires.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_classics",
+          "name": "Classiques",
+          "description": "Œuvres classiques.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_poetry",
+          "name": "Poésie",
+          "description": "Genres poétiques.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_theater",
+          "name": "Théâtre",
+          "description": "Œuvres dramatiques.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_modernLitter",
+          "name": "Littérature moderne",
+          "description": "Auteurs contemporains.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_esp-knowledge-naturalSciences",
+      "attribute": "ESP",
+      "name": "Connaissance : Sciences naturelles",
+      "description": "Connaissance du monde vivant et de l'environnement.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_biology",
+          "name": "Biologie",
+          "description": "Étude du vivant.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_botany",
+          "name": "Botanique",
+          "description": "Étude des végétaux.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_zoology",
+          "name": "Zoologie",
+          "description": "Étude des animaux.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_entomology",
+          "name": "Entomologie",
+          "description": "Étude des insectes.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_ecology",
+          "name": "Écologie",
+          "description": "Écosystèmes.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_climatology",
+          "name": "Climatologie",
+          "description": "Étude des climats.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_esp-knowledge-mathematics",
+      "attribute": "ESP",
+      "name": "Connaissance : Mathématiques",
+      "description": "Connaissance des mathématiques.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_algebra",
+          "name": "Algèbre",
+          "description": "Calcul algébrique.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_geometry",
+          "name": "Géométrie",
+          "description": "Figures et espaces.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_statistics",
+          "name": "Statistiques",
+          "description": "Analyse de données.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_accounting",
+          "name": "Comptabilité",
+          "description": "Calculs comptables.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_esp-knowledge-languages",
+      "attribute": "ESP",
+      "name": "Connaissance : langues",
+      "description": "Connaissance des langues.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_mothertongue",
+          "name": "Langue maternelle",
+          "description": "Connaissance approfondie de sa propre langue.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_foreignLanguages",
+          "name": "Langues étrangères courantes",
+          "description": "Connaissance générale des langues étrangères courantes.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_foreignlg1",
+          "name": "Langue étrangère 1",
+          "description": "Langue étrangère courante 1.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_foreignlg2",
+          "name": "Langue étrangère 1",
+          "description": "Langue étrangère courante 2.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_foreignlg3",
+          "name": "Langue étrangère 1",
+          "description": "Langue étrangère courante 3.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_foreignlg4",
+          "name": "Langue étrangère 1",
+          "description": "Langue étrangère courante 4.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_specialLanguage",
+          "name": "Langues spéciale",
+          "description": "Langue particulière très spéciale.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_esp-knowledge-physicsChemistry",
+      "attribute": "ESP",
+      "name": "Connaissance : Physique / Chimie",
+      "description": "Connaissance des lois physiques et chimiques gouvernant la matière et l'énergie.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_mechanics",
+          "name": "Mécanique",
+          "description": "Mouvement, forces et énergie.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_optics",
+          "name": "Optique",
+          "description": "Lumière et phénomènes optiques.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_thermodynamics",
+          "name": "Thermodynamique",
+          "description": "Chaleur et transformations énergétiques.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_chemistry",
+          "name": "Chimie",
+          "description": "Réactions et propriétés de la matière.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_electromagnetism",
+          "name": "Électromagnétisme",
+          "description": "Électricité, magnétisme et ondes.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_quantumPhysics",
+          "name": "Physique quantique",
+          "description": "Physique des particules et phénomènes quantiques.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_esp-knowledge-law",
+      "attribute": "ESP",
+      "name": "Connaissance : Droit",
+      "description": "Connaissance des systèmes juridiques et des procédures.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_civilLaw",
+          "name": "Droit civil",
+          "description": "Personnes, biens et contrats.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_criminalLaw",
+          "name": "Droit pénal",
+          "description": "Infractions et sanctions.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_commercialLaw",
+          "name": "Droit commercial",
+          "description": "Commerce et entreprises.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_procedure",
+          "name": "Procédures",
+          "description": "Organisation judiciaire.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_jurisprudence",
+          "name": "Jurisprudence",
+          "description": "Analyse des décisions de justice.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_esp-knowledge-esotericism",
+      "attribute": "ESP",
+      "name": "Connaissance : Ésotérisme",
+      "description": "Connaissance des traditions occultes, symboles et doctrines secrètes.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_occultism",
+          "name": "Occultisme",
+          "description": "Traditions occultes.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_symbols",
+          "name": "Symbolisme",
+          "description": "Runes, glyphes et signes.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_secretOrders",
+          "name": "Sociétés secrètes",
+          "description": "Ordres initiatiques.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_rituals",
+          "name": "Rituels",
+          "description": "Pratiques ésotériques.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_hermeticism",
+          "name": "Hermétisme",
+          "description": "Traditions hermétiques.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_esp-knowledge-spiritism",
+      "attribute": "ESP",
+      "name": "Connaissance : Spiritisme",
+      "description": "Connaissance des phénomènes liés aux esprits et à l'au-delà.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_ghosts",
+          "name": "Spectres",
+          "description": "Esprits et fantômes.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_afterlife",
+          "name": "Au-delà",
+          "description": "Plans spirituels.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_mediumship",
+          "name": "Médiumnité",
+          "description": "Communication avec les esprits.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_exorcism",
+          "name": "Exorcisme",
+          "description": "Bannissement d'entités.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_funeralRites",
+          "name": "Rites funéraires",
+          "description": "Traditions mortuaires.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_esp-knowledge-mythology",
+      "attribute": "ESP",
+      "name": "Connaissance : Mythologie",
+      "description": "Connaissance des légendes, panthéons et créatures mythiques.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_pantheons",
+          "name": "Panthéons",
+          "description": "Dieux et religions antiques.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_heroes",
+          "name": "Héros",
+          "description": "Figures légendaires.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_creatures",
+          "name": "Créatures",
+          "description": "Êtres mythiques.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_legends",
+          "name": "Légendes",
+          "description": "Mythes fondateurs.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_cosmogonies",
+          "name": "Cosmogonies",
+          "description": "Origines du monde selon les mythes.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_esp-knowledge-architecture",
+      "attribute": "ESP",
+      "name": "Connaissance : Architecture",
+      "description": "Connaissance des styles architecturaux et des techniques de conception.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_historicalStyles",
+          "name": "Styles architecturaux",
+          "description": "Roman, gothique, moderne...",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_structures",
+          "name": "Structures",
+          "description": "Résistance et stabilité.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_urbanism",
+          "name": "Urbanisme",
+          "description": "Organisation des villes.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_fortifications",
+          "name": "Fortifications",
+          "description": "Ouvrages défensifs.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_blueprints",
+          "name": "Plans et conception",
+          "description": "Lecture et conception de plans.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_esp-knowledge-astronomy",
+      "attribute": "ESP",
+      "name": "Connaissance : Astronomie",
+      "description": "Connaissance des corps célestes et de la navigation astronomique.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_celestialObjects",
+          "name": "Astres",
+          "description": "Étoiles, planètes et satellites.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_constellations",
+          "name": "Constellations",
+          "description": "Repérage du ciel.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_celestialNavigation",
+          "name": "Navigation céleste",
+          "description": "Orientation par les astres.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_celestialMechanics",
+          "name": "Mécanique céleste",
+          "description": "Orbites et mouvements.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_cosmology",
+          "name": "Cosmologie",
+          "description": "Structure et évolution de l'univers.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_per-orientation-std",
+      "attribute": "PER",
+      "name": "Orientation",
+      "description": "Capacité à se repérer dans l'espace, à lire un environnement et à maintenir un cap.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_landNavigation",
+          "name": "Navigation terrestre",
+          "description": "Boussole, étoiles et repères naturels.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_urbanNavigation",
+          "name": "Navigation urbaine",
+          "description": "Plans de ville, rues et réseaux.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_maritimeNavigation",
+          "name": "Navigation maritime",
+          "description": "Cartes marines et instruments.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_undergroundNavigation",
+          "name": "Navigation souterraine",
+          "description": "Cavernes, égouts et labyrinthes.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_spaceNavigation",
+          "name": "Navigation spatiale",
+          "description": "Coordonnées spatiales et astrogation.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_cartography",
+          "name": "Cartographie",
+          "description": "Lecture et conception de cartes.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_directionSense",
+          "name": "Sens de l'orientation",
+          "description": "Orientation instinctive et maintien d'un cap.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_per-observation-std",
+      "attribute": "PER",
+      "name": "Observation",
+      "description": "Capacité à rechercher volontairement des informations et à détecter les détails significatifs de l'environnement.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_search",
+          "name": "Recherche d'indices",
+          "description": "Anomalies, objets cachés et passages secrets.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_motionDetection",
+          "name": "Détection de mouvement",
+          "description": "Repérer des déplacements ou présences discrètes.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_longRangeObservation",
+          "name": "Observation à distance",
+          "description": "Surveillance, jumelles et longue-vue.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_nightVision",
+          "name": "Vision nocturne",
+          "description": "Exploiter une faible luminosité.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_tracking",
+          "name": "Pistage",
+          "description": "Lecture de traces, d'empreintes et d'indices de passage.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_tactileObservation",
+          "name": "Observation tactile",
+          "description": "Textures, reliefs et vibrations.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_auditoryObservation",
+          "name": "Observation auditive",
+          "description": "Localisation et identification des sons.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_olfactoryObservation",
+          "name": "Observation olfactive",
+          "description": "Détection et reconnaissance des odeurs.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_per-vigilance-std",
+      "attribute": "PER",
+      "name": "Vigilance",
+      "description": "Capacité à rester attentif à son environnement et à percevoir spontanément un danger ou un événement inhabituel.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_ambushDetection",
+          "name": "Détection d'embuscade",
+          "description": "Repérer un piège ou une présence dissimulée.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_guardDuty",
+          "name": "Surveillance",
+          "description": "Maintenir une veille attentive sur une zone.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_alertness",
+          "name": "État d'alerte",
+          "description": "Réagir rapidement à un événement inattendu.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_anomalyDetection",
+          "name": "Détection d'anomalies",
+          "description": "Remarquer qu'un élément est inhabituel ou manque.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_dividedAttention",
+          "name": "Attention partagée",
+          "description": "Surveiller simultanément plusieurs sources d'information.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_reflexObservation",
+          "name": "Réactivité perceptive",
+          "description": "Transformer une perception soudaine en réaction immédiate.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_soc-intimidation-std",
+      "attribute": "SOC",
+      "name": "Intimidation",
+      "description": "Capacité à imposer sa volonté par la menace, la présence ou la domination.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_verbal",
+          "name": "Intimidation verbale",
+          "description": "Menaces, ton autoritaire et sous-entendus.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_physicalPresence",
+          "name": "Présence physique",
+          "description": "Posture, démonstration de force et domination corporelle.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_authority",
+          "name": "Autorité",
+          "description": "Grade, réputation, statut ou renommée.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_interrogation",
+          "name": "Interrogatoire",
+          "description": "Pression psychologique pour obtenir des informations.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_psychologicalPressure",
+          "name": "Pression psychologique",
+          "description": "Créer la peur ou le doute sans violence physique.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_soc-influence-std",
+      "attribute": "SOC",
+      "name": "Influence",
+      "description": "Capacité à convaincre, persuader ou tromper autrui par la communication.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_persuasion",
+          "name": "Persuasion",
+          "description": "Convaincre sincèrement un interlocuteur.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_rhetoric",
+          "name": "Rhétorique",
+          "description": "Argumentation et éloquence.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_negotiation",
+          "name": "Négociation",
+          "description": "Trouver un compromis ou conclure un accord.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_diplomacy",
+          "name": "Diplomatie",
+          "description": "Relations officielles, tact et protocole.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_lie",
+          "name": "Mensonge",
+          "description": "Fabriquer une histoire crédible.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_bluff",
+          "name": "Bluff",
+          "description": "Faire croire à une fausse information.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_seduction",
+          "name": "Séduction",
+          "description": "Créer l'adhésion par le charme et la flatterie.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_propaganda",
+          "name": "Propagande",
+          "description": "Influencer durablement un groupe ou une opinion.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_soc-performingArt-std",
+      "attribute": "SOC",
+      "name": "Arts du spectacle",
+      "description": "Capacité à divertir, émouvoir ou captiver un public. Le MJ peut exceptionnellement substituer un autre attribut lorsque celui-ci représente mieux la nature de la performance.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_singing",
+          "name": "Chant",
+          "description": "Voix et interprétation vocale.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_music",
+          "name": "Musique",
+          "description": "Pratique d'instruments de musique.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_dance",
+          "name": "Danse",
+          "description": "Chorégraphie et expression corporelle.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_theater",
+          "name": "Théâtre",
+          "description": "Interprétation dramatique et comique.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_storytelling",
+          "name": "Conte",
+          "description": "Narration et captation de l'auditoire.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_stagePerformance",
+          "name": "Performance scénique",
+          "description": "Présence sur scène et gestion du public.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_impersonation",
+          "name": "Imitation",
+          "description": "Déguisement, mimétisme et usurpation d'identité.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_streetPerformance",
+          "name": "Art de rue",
+          "description": "Spectacles publics et improvisation.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_soc-relations-std",
+      "attribute": "SOC",
+      "name": "Relations",
+      "description": "Connaissance des réseaux sociaux et capacité à évoluer dans différents milieux.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_street",
+          "name": "Milieu de la rue",
+          "description": "Bas-fonds, réseaux criminels et marché noir.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_politics",
+          "name": "Milieu politique",
+          "description": "Institutions, élus et administration.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_aristocracy",
+          "name": "Milieu aristocratique",
+          "description": "Noblesse et haute société.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_trade",
+          "name": "Milieu marchand",
+          "description": "Guildes, commerçants et négociants.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_academia",
+          "name": "Milieu académique",
+          "description": "Universités, chercheurs et savants.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_military",
+          "name": "Milieu militaire",
+          "description": "Armées, officiers et vétérans.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_religious",
+          "name": "Milieu religieux",
+          "description": "Ordres, temples et clergé.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_media",
+          "name": "Médias",
+          "description": "Journalistes, information et communication.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_soc-commerce-std",
+      "attribute": "SOC",
+      "name": "Commerce",
+      "description": "Capacité à acheter, vendre, estimer et négocier des biens ou des services.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_bargaining",
+          "name": "Marchandage",
+          "description": "Négociation des prix et conditions.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_appraisal",
+          "name": "Évaluation",
+          "description": "Estimation de la valeur d'un bien ou d'un service.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_retail",
+          "name": "Commerce de détail",
+          "description": "Vente directe au client.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_wholesale",
+          "name": "Commerce de gros",
+          "description": "Transactions de volumes importants.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_blackMarket",
+          "name": "Marché noir",
+          "description": "Biens interdits et circuits clandestins.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_antiques",
+          "name": "Antiquités",
+          "description": "Objets rares et de collection.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_rawMaterials",
+          "name": "Matières premières",
+          "description": "Ressources naturelles et commodités.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_services",
+          "name": "Services",
+          "description": "Prestations intellectuelles, techniques ou artisanales.",
+          "defaultLevel": 0
+        }
+      ]
+    },
+    {
+      "id": "sk_cha-gambling-std",
+      "attribute": "CHA",
+      "name": "Jeux de hasard",
+      "description": "Capacité à participer à des jeux de hasard, à prendre des risques et à tirer parti de la chance lors de paris ou de tirages aléatoires.",
+      "defaultLevel": 0,
+      "specializations": [
+        {
+          "id": "sp_cardGames",
+          "name": "Jeux de cartes",
+          "description": "Poker, blackjack, tarot et autres jeux de cartes.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_diceGames",
+          "name": "Jeux de dés",
+          "description": "Craps, backgammon et autres jeux utilisant des dés.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_tableGames",
+          "name": "Jeux de table",
+          "description": "Roulette, baccara et autres jeux de casino.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_betting",
+          "name": "Paris",
+          "description": "Courses, combats, tournois et autres compétitions.",
+          "defaultLevel": 0
+        },
+        {
+          "id": "sp_lottery",
+          "name": "Loteries et tirages",
+          "description": "Loteries, tombolas et autres jeux de pure chance.",
+          "defaultLevel": 0
+        }
+      ]
+    }
+  ]
+}

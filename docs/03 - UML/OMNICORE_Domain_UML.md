@@ -1,0 +1,476 @@
+	@startuml
+	skinparam classAttributeIconSize 0
+	skinparam shadowing false
+	skinparam classFontStyle bold
+	skinparam classFontSize 14
+	skinparam classAttributeFontSize 12
+
+	/' ============================ '/
+	/' ENUMERATIONS					'/
+	/' ============================ '/
+
+	enum eControllerType {
+		PLAYER
+		GAME_MASTER
+		AI
+	}
+
+	enum eInjurySeverity {
+		LEGERE
+		MODEREE
+		SEVERE
+		CRITIQUE
+	}
+
+
+	enum eAttribute {
+		PHY
+		DEX
+		ESP
+		PER
+		SOC
+		CHA
+		POU
+		NEU
+	}
+
+	enum MediaAssetFormat {
+		jpg
+		png
+		gif
+		ico
+	}
+
+
+	/' ------- MEDIA ASSET --------------- '/
+	
+	class MediaAsset {
+	    - name : String
+		- format : MediaAssetFormat
+
+		+ Name() : String
+		+ Format() : MediaAssetFormat
+	}
+	note right of MediaAsset
+	  Aucune méthode de chargement (pas de load()/open()).
+	  Chargement effectif délégué à AssetRepository (phase Persistence).
+	end note
+	
+
+	/' ============================ '/
+	/' CLASSES						'/
+	/' ============================ '/
+
+
+	/' ------- ENTITY --------------- '/
+
+	abstract class Entity {
+		# objectCounter : Integer <<static>>
+		
+		- instanceId: Integer
+		- name : String
+		- description : List<String>
+		- tags : List<String>
+		- picture : MediaAsset*   /' nullable : null = pas d'illustration propre, défaut géré côté UI '/
+		
+		+ GenerateInstanceId(counter : Interger) : String
+		+ InstanceID() : Integer
+		+ Name() : String
+		+ Description() : List<String>
+		+ Tags() : List<String>
+		+ Picture() : MediaAsset*
+		+ ResetName(newname : String) : Void
+		+ SetDescription(line : String) : Void
+		+ SetTags(tags : List<String>) : Void
+		+ SetPicture(asset : &MediaAsset) : Void
+	}
+
+
+
+
+
+
+
+	/' ------- ATTRIBUTES --------------- '/
+
+
+	class Attributes {
+		- physique : Integer
+		- dexterite : Integer
+		- esprit : Integer
+		- perception : Integer
+		- social : Integer
+		- chance : Integer
+		- pouvoir : Integer
+		- neuro : Integer
+		- total : Integer
+
+		+ PHY() : Integer
+		+ DEX() : Integer
+		+ ESP() : Integer
+		+ PER() : Integer
+		+ SOC() : Integer
+		+ CHA() : Integer
+		+ POU() : Integer
+		+ NEU() : Integer
+		+ SetSum() : Void
+		+ GetSum() : Integer
+	}
+	
+
+	class DerivedAttributes {
+		- mnv : Integer
+		- dpl : Integer
+		- rfx : Integer
+		- dfp : Integer
+		- rp  : Integer
+		- rm  : Integer
+
+		+ MNV() : Integer
+		+ DPL() : Integer
+		+ RFX() : Integer
+		+ DFP() : Integer
+		+ RP()  : Integer
+		+ RM()  : Integer
+	}
+	
+
+	class Morphology {
+		- species : String
+		- sizeModifier : Integer
+		- massModifier : Integer
+
+		+ GetSpecies() : String
+		+ GetSizeModifier() : Integer
+		+ GetMassModifier() : Integer
+		
+		+ SetSpecies(species : String) : Void
+		+ SetSizeMod(sizemod : Integer) : Void
+		+ SetMassMod(massmod : Integer) : Void
+	}
+
+	class Injury {
+		- tag : String
+		- severity : eInjurySeverity
+		- penalty : Integer
+
+		+ Tag() : String
+		+ Severity() : eInjurySeverity
+		+ SeverityStr() : String
+		+ Penalty() : Integer
+		
+		+ computePenalty(eInjurySeverity) : Integer <<static>>
+	}
+
+
+
+	/' ---------  SKILLS -------------------  '/
+	
+		class Specialization {
+		+ specialDescript : String  const
+		+ specId : String const
+		+ name : String const
+	}
+
+	class ActiveSpecialization {
+		+ specializ : &Specialization
+		-  level : Integer
+
+		+ ActiveSpecialization(level : Integer, special : &Specialization)
+	}
+
+
+	class Skill{
+		+ basicAttribute: eAttribute
+		+ skillId : String
+		+ name: String  
+		+ descript : String[3]  
+		+ specializations : List<Specialization> 
+	}
+
+
+	class SkillDatabase {
+		- skills : Map<SkillId, Skill>
+		- version : Integer
+
+		+ insert(skill : Skill) : Boolean     // rejette si SkillId déjà présent
+		+ findByName(name : String) : &Skill
+		+ findById(id : String) : &Skill
+		+ Version() : Integer
+		+ SetVersion(v : Integer) : Void
+	}
+
+	class ActiveSkill {
+		+ skill : &Skill
+		- skillLevel : Integer
+		+ activeSpecializ : List<ActiveSpecialization >
+
+		+ ActiveSkill(level : Integer)
+		+ increaseLevel()
+		+ decreaseLevel()
+		+ findSpecialization(specId : String) : &Specialization
+		+ getSpecializationIndex(specName : String) : Integer
+	}
+
+
+	/'  ----------- ACTOR --------------------- '/
+
+	abstract class Actor {
+		- controller : eControllerType
+		- userId : String
+		- attributes : Attributes
+		- derivedAttributes : DerivedAttributes
+		- morphology : Morphology
+		- injuries : List<Injury>
+		- skills : List<ActiveSkill>
+		- power : Integer
+		- level : Integer
+
+		+ getController() : eControllerType {query}
+		+ getUserId() : String {query}
+		+ getAttributes() : Attributes
+		+ getDerivedAttributes() : DerivedAttributes
+		+ getMorphology() : Morphology
+		+ getInjuries() : List<Injury>
+		+ getPower() : Integer
+		+ getLevel() : Integer
+		
+		+ setController(controller : eControllerType) : Void
+		+ setAttributes(attributes : Attributes) : Void
+		+ calculateDerivedAttributes() : Void
+		+ setMorphology(morpho : Morphology) : Void
+		+ setPower(pwr : Integer) : Void
+		+ setLevel(lvl : Integer) : Void
+		
+		+ addInjury(tag : String, severity : eInjurySeverity) : Boolean
+		+ removeInjury(index : Integer) : Boolean
+		+ addSkill(newskill : &Skill, level : Integer) : &ActiveSkill
+		+ skillIndex(skillId : String) : Integer
+		+ removeSkill(skillIndex : Integer) : Boolean
+		+ addSpecialization(skillselect : &ActiveSkill, newspec : &Specialization, level : Integer) : &ActiveSpecialization
+		+ removeSpecialization(specIndex : Integer) : Boolean
+	}
+	note right of Actor::calculateDerivedAttributes
+	  Ne fait pas le calcul elle-même : délègue à une fonction
+	  statique du Rule Engine, ex.
+	  RuleEngine::DerivedAttributes(const Attributes&, universeTag)
+	  RuleEngine non modélisé dans ce diagramme (hors périmètre
+	  Character System — cf. Architecture.md §4.6).
+	  Appelée par le constructeur et à chaque modification
+	  des attributs de base.
+	end note
+
+
+
+	/'  ---------  CHARACTER ---------------------------------  '/
+
+
+	enum eGenderType {
+
+		MASC
+		FEMM
+		FTM
+		MTF
+		UNDEF
+	}
+
+	class Litterals {
+		 + Story : String[9]
+		 + Culture : String
+		 + LifePath: String 
+		 + Quest: String
+		 + Darkness: String
+		 + Quirks: String[5]
+	}
+
+
+/' --------------------  Items et équipement -------------------------- '/
+
+	class Item extends Entity {
+		  + name : String			// Nom de l'Item par exemple "Collier de Kaëndor"
+		  + tag : String			// Par exemple : "Collier avec une gemme gravée des runes de Kaëndor"
+		  + encomb : Integer		// Niveau d'emcombrement
+		  + dmResist : Integer		// Résistance aux dommages (PV de l’objet)
+		  + value : Integer			// Valeur sur le marché
+		  + rareness : Integer		// Difficulté à trouver ce type d’équipement [0 ; 10]
+		  + phyMin : Integer		// Force minimale pour porter l’item
+
+
+	}
+
+
+	class Equipment extends Item {
+		  - equiped : Boolean      	// Le personnage l'a sur lui (dans son sac, à la ceinture...)  
+		  
+		  + equip() : Void        	// met 'equiped' à True
+		  + unequip() : Void        // met 'equiped' à False
+		  + isEquiped() : Boolean  	// Check 'equiped'
+
+	}
+	
+	
+	class Armor extends Equipment {
+		  + dmProtect : Integer   	// Protection contre les dommages (points d'armure)
+
+	}		
+
+
+    class Tool extends Equipment {
+		  - handled: Boolean      	// Le personnage l'a à la main		
+		  
+		  + takeIt() : Void         // met 'handled' à True
+		  + dropIt() : Void         // met 'handled' à False
+		  + isHandled() : Boolean  	// Check 'handled'
+	}
+	
+	
+	class Weapon extends Tool {
+		  + attack : Integer		// Bonus d'attaque
+		  + defense : Integer   	// Protection contre les attaques de l'adversaire (en mode parade)
+		  + damages : Integer     	// Dommages infligés par l'arme
+		  + range  : Integer       	// Portée pour les armes à distance (0 est une arme de contact)
+		  + specialEffect : String  // Effet particulier : poison, brulure...
+		  + hands : Integer         // 1 ou 2 : arme à une ou deux mains
+	}
+
+	
+
+	class Finance {
+
+		  - totalRessource : Integer    
+
+		  + pay(value : Integer) : Integer
+		  + collect(value : Integer) : Void
+
+		  + setFinance(value : Integer) : Void	
+		  + getFinance() : Integer
+	}
+
+
+	class Faction extends Entity {
+	}
+
+
+	class Character extends Actor {
+		- characterRole : String
+		- gender : eGenderType
+		- litteralAttributes : Litterals
+		- inventory : List<Item>
+		- familiars : List<&Actor>
+		- factions : List<&Faction>
+		
+		+ FinanceRessource : Finance	
+
+
+		+ getRole() : String {query}
+		+ getGender() : eGenderType {query}
+		+ getGenderStr() : String {query}	
+		+ getLitterals() : Litterals {query}
+		+ getInventory() : List<Item>  {query}
+		+ getWeapons() : List<Weapon>  {query}
+		+ getArmor() : Armor  {query}   // calculé : filtre inventory sur (is Armor AND equiped)
+		+ getEquipment(index : Integer) : Equipment  {query}
+		+ getHandled() : Tool[2]	  {query}
+		+ getFactions() : List<&Faction>  {query}
+
+		+ setRole(role: String) : Void
+		+ setGender(gender: eGenderType) : Void
+		+ setArmor(armor : &Armor) : Void   // délègue à armor->equip() ; désequipe l'armure précédente
+		+ addEquipment(equip : Equipment)  : Integer
+		+ Handle(tool : Tool) : Tool[2]
+		+ addFaction(faction : &Faction) : Void
+		+ removeFaction(faction : &Faction) : Boolean
+		
+	}
+
+/' ------------- CREATURE -----------------------'/
+		
+	class Creature extends Actor {
+		- category : String
+		- specialMove : String     // voler, ramper, sauter
+		- naturalWeapon : List<Weapon>
+		- owner : &Character
+		- quirks : String[5]       /' forme mineure de Litterals — pas de récit complet pour une créature '/
+		
+		+ getCategory() : String
+		+ getSpecialMove() : String 
+		+ getNaturalWeapon(): List<Weapon>
+		+ getOwner() : &Character
+		+ getQuirk(index : Integer) : String
+		+ getQuirks() : String[5]
+				
+		+ setCategory(cat : String) : Void
+		+ setSpecialMove(spmove : String) : Void
+		+ addNaturalWeapon(natweapon : Weapon) : Integer
+		+ setOwner(charac : &Character) : String   // l'Id du Character	
+
+}
+
+
+/' ============================ '/
+/' RELATIONS                    '/
+/' ============================ '/
+
+' --- Héritage ---
+Entity <|-- Actor
+Entity <|-- Item
+Entity <|-- MediaAsset
+Entity <|-- Faction
+
+' --- MediaAsset : agrégation, partage autorisé entre Entity ---
+Entity o-- "0..1" MediaAsset : picture
+MediaAsset --> "1" MediaAssetFormat : kind
+
+' --- Character : appartenance de faction, référence non-propriétaire ---
+Character o-- "0..*" Faction : factions
+
+Actor <|-- Character
+Actor <|-- Creature
+
+Item <|-- Equipment
+Equipment <|-- Armor
+Equipment <|-- Tool
+Tool <|-- Weapon
+
+' --- Actor : composition (cycle de vie lié à l'Actor) ---
+Actor *-- "1" Attributes
+Actor *-- "1" DerivedAttributes
+Actor *-- "1" Morphology
+Actor *-- "0..*" Injury : injuries
+
+Injury --> "1" eInjurySeverity : severity
+
+' --- Skill / Specialization : catalogue possédé par SkillDatabase ---
+SkillDatabase *-- "0..*" Skill : catalogue
+Skill *-- "0..*" Specialization : specializations
+Skill --> "1" eAttribute : basicAttribute
+
+' --- ActiveSkill / ActiveSpecialization : instances possédées, référencent le catalogue ---
+Actor *-- "0..*" ActiveSkill : skills
+ActiveSkill --> "1" Skill : skill (réf. catalogue, non-propriétaire)
+ActiveSkill *-- "0..*" ActiveSpecialization : activeSpecializ
+ActiveSpecialization --> "1" Specialization : specializ (réf. catalogue, non-propriétaire)
+
+' --- Character ---
+Character *-- "1" Litterals
+Character *-- "1" Finance : FinanceRessource
+Character *-- "0..*" Item : inventory
+
+note right of Character::getArmor
+  Calculé : filtre inventory
+  sur (is Armor AND equiped)
+end note
+note right of Character::getWeapons
+  Calculé : filtre inventory sur (is Weapon)
+end note
+note right of Character::getHandled
+  Calculé : filtre inventory sur (is Tool AND handled)
+end note
+
+Character o-- "0..*" Actor : familiars (référence non-propriétaire)
+
+' --- Creature ---
+Creature *-- "0..*" Weapon : naturalWeapon
+Creature o-- "0..1" Character : owner (back-reference non-propriétaire)
+
+@enduml

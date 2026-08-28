@@ -1,0 +1,41 @@
+# ---- Build (CMake) ----
+build/
+out/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CTestTestfile.cmake
+Makefile
+compile_commands.json
+
+# ---- Binaires / objets ----
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+*.pdb
+*.ilk
+
+# ---- Anciens artefacts Visual Studio (migration CMake en cours) ----
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+.vs/
+
+# ---- Éditeurs / IDE ----
+.vscode/
+.idea/
+.cache/
+
+# ---- Système ----
+.DS_Store
+Thumbs.db
+
+# ---- Dépendances récupérées via FetchContent ----
+_deps/

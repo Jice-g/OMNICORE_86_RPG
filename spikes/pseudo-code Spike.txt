@@ -1,0 +1,71 @@
+fonction run(cheminFichier : String) -> Résumé
+| SPIKE — logique volontairement plate, un seul fichier, pas de découpage
+| en classes internes : ça n'a pas besoin de survivre.
+
+    flux = ouvrir(cheminFichier)
+    si échec ouverture :
+        afficher "Impossible d'ouvrir " + cheminFichier
+        retourner échec
+
+    catalogJson = JSON.parser(flux)
+    si échec parsing :
+        afficher "JSON invalide : " + message_erreur
+        retourner échec
+
+    si catalogJson["catalog"] != "SkillCatalog" :
+        afficher "Fichier inattendu : catalog = " + catalogJson["catalog"]
+        retourner échec
+
+    db = nouvelle SkillDatabase()
+    loadedCount = 0
+    rejectedCount = 0
+
+    pour chaque skillJson dans catalogJson["skills"] :
+
+        specs = liste vide
+
+        pour chaque specJson dans skillJson["specializations"] :
+            spec = nouvelle Specialization(
+                specId          = specJson["id"],
+                name            = specJson["name"],
+                specialDescript = specJson["description"]
+            )
+            | Note : defaultLevel du JSON n'est pas stocké — valeur de
+            | vérification au chargement seulement (doit valoir 0).
+            specs.ajouter(spec)
+
+        skill = nouveau Skill(
+            skillId        = skillJson["id"],
+            name           = skillJson["name"],
+            basicAttribute = skillJson["attribute"],
+            descript       = [ skillJson["description"], "", "" ],
+            | Note : le modèle prévoit 3 niveaux de description (Domain.md §5) ;
+            | seul le niveau 0 est peuplé pour l'instant, cf. Architecture.md §3.
+            specializations = specs
+        )
+
+        succes = db.insert(skill)
+        si succes :
+            loadedCount = loadedCount + 1
+        sinon :
+            rejectedCount = rejectedCount + 1
+            afficher "Doublon rejeté : " + skillJson["id"]
+
+    | Vérification minimale — pas de framework de test formel à ce stade
+    exemple = db.findById("sk_phy-athletism-std")
+    assert(exemple != introuvable)
+    assert(exemple.name == "Athlétisme")
+
+    afficher "Chargées : " + loadedCount + " / Rejetées : " + rejectedCount
+    afficher "Exemple : " + exemple.name + " (" + exemple.specializations.taille() + " spécialisations)"
+
+    retourner succès
+
+
+fonction main(argv) :
+    chemin = si argv contient un argument alors argv[1] sinon "spikes/fixtures/commonskills.json"
+    résultat = run(chemin)
+    retourner 0 si succès sinon 1
+
+
+

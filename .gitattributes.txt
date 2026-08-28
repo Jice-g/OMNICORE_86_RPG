@@ -1,0 +1,24 @@
+# Normalisation générale : LF en dépôt, conversion locale gérée par Git
+* text=auto eol=lf
+
+# Sources C++ : LF explicite
+*.cpp text eol=lf
+*.hpp text eol=lf
+*.h   text eol=lf
+
+# Données et documentation : LF explicite
+*.json text eol=lf
+*.md   text eol=lf
+*.txt  text eol=lf
+*.cmake text eol=lf
+CMakeLists.txt text eol=lf
+
+# UML : LF explicite
+*.puml text eol=lf
+
+# Assets : binaire, jamais de conversion
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.svg  binary
+*.ico  binary

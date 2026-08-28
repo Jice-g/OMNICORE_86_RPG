@@ -1,0 +1,26 @@
+
+	class Attributes
+	...
+		+ SetSum() : Void
+		+ GetSum() : Integer
+		
+		sp --> rp (SP / RP)
+		sm --> rm (SM / RM)
+
+
+	class Morphology {
+		- species : String
+		- sizeModifier : Integer
+		- massModifier : Integer
+
+		+ GetSpecies() : String
+		+ GetSizeModifier() : Integer
+		+ GetMassModifier() : Integer
+		
+		+ SetSpecies(species : String) : Void
+		+ SetSizeMod(sizemod : Integer) : Void  validation [-6..+6]
+		+ SetMassMod(massmod : Integer) : Void  validation [-6..+6]
+	}
+	
+	
+	
