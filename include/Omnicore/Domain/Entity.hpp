@@ -73,7 +73,7 @@ namespace Omnicore::Domain
         /// @param newname : nom du nouvel asset.
         /// <i> cpp : initialisation : m_name(std::move(newname)), m_format(asset.Format())
         [[nodiscard]]
-        MediaAsset DuplicateAs(std::string newname) const noexcept;
+        MediaAsset DuplicateAs(std::string newname) const;
 
         void SetFormat(MediaAssetFormat format);
 

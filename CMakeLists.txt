@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.20)
+﻿cmake_minimum_required(VERSION 3.20)
 
 project(OMNICORE_86_RPG
     LANGUAGES CXX
@@ -10,5 +10,4 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 # Squelette volontairement minimal — aucune cible pour l'instant.
 # Les sous-répertoires (spikes/, src/, tests/...) seront ajoutés
-# via add_subdirectory() au fil des prochaines étapes du Kanban,
-# en commençant par le stub du walking skeleton (Étape 0).
+# au fil des prochaines étapes, et nottamment le stub du walking skeleton (Étape 0).

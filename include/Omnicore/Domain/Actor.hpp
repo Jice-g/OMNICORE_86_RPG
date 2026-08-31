@@ -18,13 +18,13 @@ namespace Omnicore::Domain
     // ENUMS
     // ============================================================
 
-    /// @enum e_Controller
+    /// @enum eController
     /// @brief Définit qui contrôle l'acteur.
     /// @details
     /// - PLAYER : contrôlé par un joueur humain  
     /// - GAME_MASTER : contrôlé par le MJ  
     /// - IA : contrôlé par l'intelligence artificielle  
-    enum class e_Controller
+    enum class eController
     {
         PLAYER,
         GAME_MASTER,
@@ -99,7 +99,7 @@ namespace Omnicore::Domain
         /// @param tag Libellé de la blessure.
         /// @param severity Niveau de sévérité.
         /// @details Le malus est automatiquement calculé.
-        Injury(const std::string& tag, eInjurySeverity severity) noexcept;
+        Injury(const std::string& tag, eInjurySeverity severity);
 
 
         /// @brief Retourne le libellé de la blessure.
@@ -122,7 +122,7 @@ namespace Omnicore::Domain
         /// @brief Calcule le malus en fonction de la sévérité.
         /// @param s Sévérité.
         /// @return Malus entier.
-        static int ComputePenalty(eInjurySeverity s) noexcept;
+        static int ComputePenalty(eInjurySeverity s);
     };
 
 
@@ -152,7 +152,7 @@ namespace Omnicore::Domain
         /// @brief Constructeur avec nom et contrôleur.
         /// @param name Nom de l'acteur.
         /// @param controller Type de contrôleur.
-        explicit Actor(const std::string& name, e_Controller controller);
+        explicit Actor(const std::string& name, eController controller);
 
         /// @brief Destructeur virtuel.
         virtual ~Actor() = default;
@@ -162,7 +162,7 @@ namespace Omnicore::Domain
         // ------------------------------------------------------------
 
         /// @brief Retourne le contrôleur de l'acteur.
-        e_Controller Controller() const noexcept;
+        eController Controller() const noexcept;
 
         /// @brief Retourne les attributs de base.
         const Attributes& GetAttributes() const noexcept;
@@ -195,10 +195,10 @@ namespace Omnicore::Domain
                            int sociabilite, int chance, int pouvoir, int neuro);
 
         /// @brief Modifie le contrôleur.
-        void SetController(e_Controller controller) noexcept;
+        void SetController(eController controller) ;
 
         /// @brief Modifie la morphologie.
-        void SetMorphology(const Morphology& m) noexcept;
+        void SetMorphology(const Morphology& m) ;
 
         /// @brief Modifie la puissance totale.
         /// @details
@@ -209,15 +209,15 @@ namespace Omnicore::Domain
         /// @brief Ajoute une blessure.
         /// @return true si ajout réussi.
         /// <i> le vector peut avoir réalloué la mémoire
-        bool AddInjury(const std::string& tag, eInjurySeverity severity) noexcept;
+        bool AddInjury(const std::string& tag, eInjurySeverity severity) noexcept ;
 
         /// @brief Supprime une blessure par index.
         /// @return true si suppression réussie.
         ///<i> le vector peut avoir réalloué la mémoire
-        bool EraseInjury(int index) noexcept;
+        bool EraseInjury(int index) noexcept ;
 
     protected:
-        e_Controller m_controller = e_Controller::PLAYER;   ///< Contrôleur de l'acteur.
+        eController m_controller = eController::PLAYER;   ///< Contrôleur de l'acteur.
         Morphology m_morphology;                            ///< Morphologie.
         Attributes m_attributes;                            ///< Attributs de base.
         DerivedAttributes m_derivedAttributes;              ///< Attributs dérivés.
