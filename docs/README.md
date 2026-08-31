@@ -1,8 +1,3 @@
-Voici un **README GitHub complet**, professionnel, structuré, et entièrement basé sur tes documents (avec citations précises).  
-Il est prêt à être copié-collé dans ton dépôt GitHub *OmniCore_86RPG_System*.
-
----
-
 # OmniCore_86RPG_System  
 **A modular C++20 engine for tabletop role‑playing games.**
 
